@@ -1,11 +1,11 @@
 [user]
-  name = Ben Martinez-Bateman
-  email = ben@alwaysblank.org
+  	name = Ben Martinez-Bateman
+	email = ben@alwaysblank.org
 	signingkey = E8E7FB661F2BF7DD
 [hub]
-  protocol = ssh
+	protocol = ssh
 [core]
-  excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [commit]
 	gpgsign = true
