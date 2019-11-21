@@ -1,5 +1,5 @@
 if status --is-interactive
-  set --global fish_user_paths $fish_user_paths ~/.rbenv/bin
+  set PATH ~/.rbenv/bin $PATH
   . (rbenv init - | psub)
 end
 set PATH ~/.cargo/bin ~/.scripts ~/.config/composer/vendor/bin $PATH
