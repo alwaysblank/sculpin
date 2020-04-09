@@ -20,7 +20,10 @@
 	       :ensure t)
 
 (use-package org-journal
-	       :ensure t)
+  :ensure t)
+
+(use-package htmlize
+  :ensure t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -39,3 +42,21 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; Add wc-mode
+;; see: https://www.emacswiki.org/emacs/wcMode
+(setq mode-line-position
+      (append
+       mode-line-position
+       '((wc-mode
+	  (6 (:eval (if (use-region-p)
+			(format " %d,%d,%d"
+				(abs (- (point) (mark)))
+				(count-words-region (point) (mark))
+				(abs (- (line-number-at-pos (point))
+					(line-number-at-pos (mark)))))
+		      (format " %d,%d,%d"
+			      (- (point-max) (point-min))
+			      (count-words-region (point-min) (point-max))
+			      (line-number-at-pos (point-max))))))
+	  nil))))
