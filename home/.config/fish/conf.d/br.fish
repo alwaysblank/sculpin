@@ -1,0 +1,1 @@
+/home/ben/.local/share/broot/launcher/fish/1.fish
