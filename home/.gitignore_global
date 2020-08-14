@@ -21,3 +21,9 @@ auth.json
 *~
 \#*\#
 .\#*
+
+# ctags
+tags
+
+# php-cs
+.php_cs.cache
