@@ -1,0 +1,15 @@
+{
+	"languageserver": {
+        "intelephense": {
+			// This is not idea! Unfortunately vim doesn't seem to be aware of volta.
+            "command": "/home/ben/.volta/bin/intelephense",
+            "args": ["--stdio"],
+            "filetypes": ["php"],
+            "initializationOptions": {
+                "storagePath": "/tmp/intelephense"
+            }
+        }
+    },
+	"phpactor.enable": true,
+	"phpactor.path": "~/.local/share/nvim/plugged/phpactor/bin/phpactor"
+}
