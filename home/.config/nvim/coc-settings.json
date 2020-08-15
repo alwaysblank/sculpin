@@ -8,6 +8,19 @@
             "initializationOptions": {
                 "storagePath": "/tmp/intelephense"
             }
+        },
+        "rome-lsp": {
+          "command": "/home/ben/.volta/bin/rome",
+          "args": ["lsp"],
+          "filetypes": [
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "typescriptreact",
+            "json"
+          ],
+          "rootPatterns": [".config"],
+          "requireRootPattern": true
         }
     },
 	"phpactor.enable": true,

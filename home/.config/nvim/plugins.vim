@@ -22,6 +22,8 @@ Plug 'simnalamburt/vim-mundo'
 Plug 'itchyny/lightline.vim'
 " enable base16 color schemes
 Plug 'chriskempson/base16-vim'
+" add base16 themes to lightline
+Plug 'mike-hearn/base16-vim-lightline'
 " git handling
 Plug 'tpope/vim-fugitive'
 " file explorer
@@ -61,3 +63,9 @@ Plug 'stephpy/vim-php-cs-fixer'
 Plug 'adoy/vim-php-refactoring-toolbox'
 " doc generator
 Plug 'tobyS/pdv'
+" align text and so on
+Plug 'godlygeek/tabular'
+" syntax highlighting for njk, jinja files
+Plug 'lepture/vim-jinja'
+" better adoc highlighting
+Plug 'habamax/vim-asciidoctor'

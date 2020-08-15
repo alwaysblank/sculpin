@@ -17,3 +17,6 @@ set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\
 
 " make tabs less huge
 set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
+
+" don't show redundant mode
+set noshowmode

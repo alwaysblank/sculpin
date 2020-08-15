@@ -1,5 +1,4 @@
-" don't show redundant mode
-set noshowmode
+
 
 function! LightlineFilename()
   let l:name = winwidth(0) > 70 ? expand('%:p:h:t') . '/' . expand('%:t') : expand('%:t')
@@ -7,11 +6,19 @@ function! LightlineFilename()
 endfunction
 
 function! LightlineReadonly()
-  return &readonly && &filetype !=# 'help' ? 'RO' : ''
+  return &readonly && &filetype !=# 'help' ? '' : ''
 endfunction
 
 function! LightlineFiletype()
   return winwidth(0) > 70 && &filetype !=# '' ? &filetype : ''
+endfunction
+
+function! LightlineFugitive()
+    if exists('*FugitiveHead')
+        let branch = FugitiveHead()
+        return branch !=# '' ? ''.branch : ''
+    endif
+    return ''
 endfunction
 
 " pulls in the current function from coc
@@ -21,21 +28,22 @@ function! CocCurrentFunction()
 endfunction
 
 let g:lightline = {
-      \ 'colorscheme': 'powerline',
+      \ 'colorscheme': 'base16_synth_midnight_dark',
       \ 'component_function': {
       \   'filename': 'LightlineFilename',
       \   'readonly': 'LightlineReadonly',
       \   'filetype': 'LightlineFiletype',
-      \   'cocstatus': 'coc#status',
-      \   'currentfunction': 'CocCurrentFunction',
-      \   'gitbranch': 'FugitiveHead'
+      \   'gitbranch': 'LightlineFugitive'
       \ },
+      \ 'component': {
+      \   'lineinfo': ' %3l:%-2v',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' },
       \ 'active': {
       \   'left': [['mode', 'paste'],
-      \            ['readonly', 'filename', 'modified']],
-      \   'right': [['cocstatus'],
-      \             ['currentfunction'],
-      \             ['lineinfo'],
+      \            ['gitbranch', 'readonly', 'filename', 'modified']],
+      \   'right': [['lineinfo'],
       \             ['percent']]
       \ },
       \ 'inactive': {
@@ -43,3 +51,4 @@ let g:lightline = {
       \   'right': []
       \ },
       \ }
+
