@@ -42,3 +42,9 @@ set -U FZF_DEFAULT_OPTS "$FZF_NON_COLOR_OPTS"\
 " --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C"\
 " --color=marker:$color0C,fg+:$color06,prompt:$color0A,hl+:$color0D"
 set -gx FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
+
+# Base16 Shell
+if status --is-interactive
+    set BASE16_SHELL "$HOME/.config/base16-shell/"
+    source "$BASE16_SHELL/profile_helper.fish"
+end
