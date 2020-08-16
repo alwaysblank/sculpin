@@ -52,3 +52,5 @@ let g:lightline = {
       \ },
       \ }
 
+" don't show redundant mode
+set noshowmode

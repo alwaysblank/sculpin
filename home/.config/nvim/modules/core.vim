@@ -8,9 +8,6 @@ set mouse=a
 set updatetime=500
 set sessionoptions=blank,curdir,folds,help,tabpages,winsize
 
-set background=dark
-set termguicolors
-
 " show some invisible characters
 set list
 set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\ 
@@ -18,5 +15,3 @@ set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\
 " make tabs less huge
 set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
 
-" don't show redundant mode
-set noshowmode
