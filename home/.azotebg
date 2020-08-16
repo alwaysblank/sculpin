@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+pkill swaybg
+swaybg -o* -i '/home/ben/Pictures/bg/steven-shaffer-5Y6pMZMnewA-unsplash.jpg' -m fill &

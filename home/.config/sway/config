@@ -54,8 +54,8 @@ smart_gaps on
 gaps inner 10
 
 # Autostart
-exec --no-startup-id mako
-exec --no-startup-id redshift -c ~/.config/redshift/config
+exec mako
+exec redshift -c ~/.config/redshift/config
 exec spotify
 
 # Input configuration
@@ -236,4 +236,4 @@ bindsym $mod+Shift+e mode "$mode_system"
 exec_always ~/.config/waybar/waybar.sh
 
 
-# include ~/.config/sway/$(hostname)/*
+include ~/.config/sway/$(hostname)/*
