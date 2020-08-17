@@ -75,7 +75,7 @@
         "on-scroll-up": "light -U 1"
     },
     "custom/weather": {
-        "exec": "curl 'https://wttr.in/Gresham?format=1'",
+        "exec": "curl 'https://wttr.in/Gresham?format=4'",
         "interval": 3600
     },
     "idle_inhibitor": {
