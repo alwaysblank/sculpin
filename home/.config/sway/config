@@ -3,7 +3,7 @@ set $mod Mod4
 # set $lock ~/.local/bin/scripts/lock.sh
 set $power ~/.config/rofi/modi/power
 set $wifi ~/.config/rofi/modi/nmcli
-set $term alacritty
+set $term kitty
 set $menu dmenu_path | wofi --show drun -i | xargs swaymsg exec --
 set $screenshot grim ~/Pictures/screenshots/scrn-$(date +"%Y-%m-%d-%H-%M-%S").png
 set $screenclip slurp | grim -g - ~/Pictures/screenshots/clip-$(date +"%Y-%m-%d-%H-%M-%S").png
