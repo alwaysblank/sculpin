@@ -5,3 +5,4 @@ runtime! plugin/default.vim
 set undodir=~/.config/nvim/undo
 set wrap
 set clipboard-=unnamedplus
+set noshowmode
