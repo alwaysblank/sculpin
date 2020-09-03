@@ -1,7 +1,6 @@
 if status --is-interactive
   set PATH ~/.rbenv/bin $PATH
   source (rbenv init - | psub)
-  eval (starship init fish)
 end
 set PATH ~/.cargo/bin ~/.scripts ~/.config/composer/vendor/bin ~/.composer/vendor/bin $PATH
 set -g -x EDITOR 'nvim'
@@ -45,4 +44,8 @@ set -gx FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
 if status --is-interactive
     set BASE16_SHELL "$HOME/.config/base16-shell/"
     source "$BASE16_SHELL/profile_helper.fish"
+end
+
+if status --is-interactive
+  starship init fish | source
 end
