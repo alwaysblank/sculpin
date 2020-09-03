@@ -1,7 +1,7 @@
 """ comment plugins to help you figure this shit out
 
 
-Plug 'mhartington/nvim-typescript'
+" Plug 'mhartington/nvim-typescript'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neomake/neomake'

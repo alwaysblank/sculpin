@@ -8,21 +8,11 @@
             "initializationOptions": {
                 "storagePath": "/tmp/intelephense"
             }
-        },
-        "rome-lsp": {
-          "command": "/home/ben/.volta/bin/rome",
-          "args": ["lsp"],
-          "filetypes": [
-            "javascript",
-            "javascriptreact",
-            "typescript",
-            "typescriptreact",
-            "json"
-          ],
-          "rootPatterns": [".config"],
-          "requireRootPattern": true
         }
     },
+  "tsserver": {
+      "npm": "/home/ben/.config/nvm/12.18.3/bin/npm"
+  },
 	"phpactor.enable": true,
 	"phpactor.path": "~/.local/share/nvim/plugged/phpactor/bin/phpactor"
 }
