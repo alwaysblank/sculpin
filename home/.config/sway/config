@@ -235,5 +235,6 @@ bindsym $mod+Shift+e mode "$mode_system"
 
 exec_always ~/.config/waybar/waybar.sh
 
+exec ~/.azotebg
 
 include ~/.config/sway/$(hostname)/*
