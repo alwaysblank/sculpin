@@ -1,11 +1,11 @@
 if status --is-interactive
   set PATH ~/.rbenv/bin $PATH
   source (rbenv init - | psub)
+  eval (starship init fish)
 end
 set PATH ~/.cargo/bin ~/.scripts ~/.config/composer/vendor/bin ~/.composer/vendor/bin $PATH
 set -g -x EDITOR 'nvim'
 set -g -x VISUAL 'nvim'
-eval (starship init fish)
 
 # Base16 Synth Midnight Terminal Dark
 # Author: Michaël Ball (http://github.com/michael-ball/)
