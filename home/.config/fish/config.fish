@@ -6,8 +6,6 @@ set PATH ~/.cargo/bin ~/.scripts ~/.config/composer/vendor/bin ~/.composer/vendo
 set -g -x EDITOR 'nvim'
 set -g -x VISUAL 'nvim'
 eval (starship init fish)
-set -gx VOLTA_HOME "/home/ben/.volta"
-set -gx PATH "$VOLTA_HOME/bin" $PATH
 
 # Base16 Synth Midnight Terminal Dark
 # Author: Michaël Ball (http://github.com/michael-ball/)
