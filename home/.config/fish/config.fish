@@ -2,7 +2,7 @@ if status --is-interactive
   set PATH ~/.rbenv/bin $PATH
   source (rbenv init - | psub)
 end
-set PATH ~/.cargo/bin ~/.scripts ~/.config/composer/vendor/bin ~/.composer/vendor/bin $PATH
+set PATH ~/.local/bin ~/.cargo/bin ~/.scripts ~/.config/composer/vendor/bin ~/.composer/vendor/bin $PATH
 set -g -x EDITOR 'nvim'
 set -g -x VISUAL 'nvim'
 

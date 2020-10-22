@@ -79,6 +79,11 @@ assign [class="^Firefox Developer Edition$"] $ws1
 # assign [class="^code-oss$"] $ws2
 assign [class="^Spotify$"] $wsF12
 
+# makeshift quake terminal
+for_window [app_id="terminal_scratchpad"] move scratchpad, resize set 800 610
+bindsym F1 exec swaymsg [app_id="terminal_scratchpad"] scratchpad show
+exec kitty --name=terminal_scratchpad
+
 # Shortcuts
 bindsym $mod+Return exec $term
 bindsym $mod+Print exec $screenshot

@@ -2,7 +2,7 @@
 	"languageserver": {
         "intelephense": {
 			// This is not idea! Unfortunately vim doesn't seem to be aware of volta.
-            "command": "/home/ben/.volta/bin/intelephense",
+            "command": "/home/ben/.config/nvm/12.18.3/bin/intelephense",
             "args": ["--stdio"],
             "filetypes": ["php"],
             "initializationOptions": {
