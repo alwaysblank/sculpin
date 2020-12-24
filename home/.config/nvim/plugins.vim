@@ -2,7 +2,7 @@
 
 
 " Plug 'mhartington/nvim-typescript'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neomake/neomake'
 Plug 'mhinz/vim-signify'
@@ -69,3 +69,11 @@ Plug 'godlygeek/tabular'
 Plug 'lepture/vim-jinja'
 " better adoc highlighting
 Plug 'habamax/vim-asciidoctor'
+" org mode highlighting and folding
+Plug 'axvr/org.vim'
+" stuff for writing prose in vim
+Plug 'reedes/vim-pencil'
+" distraction-free writing
+Plug 'junegunn/goyo.vim'
+" highlight current paragraph
+Plug 'junegunn/limelight.vim'

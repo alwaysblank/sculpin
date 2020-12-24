@@ -21,6 +21,44 @@ set background=dark
 colorscheme base16-synth-midnight-dark
 hi Normal guibg=NONE ctermbg=NONE
 
+" Auto-create directories when saving into dirs that don't exist
+function s:MkNonExDir(file, buf)
+    if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
+        let dir=fnamemodify(a:file, ':h')
+        if !isdirectory(dir)
+            call mkdir(dir, 'p')
+        endif
+    endif
+endfunction
+augroup BWCCreateDir
+    autocmd!
+    autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
+augroup END
+
+function! JournalMode()
+  execute 'normal gg'
+  let filename = '=' . ' ' . expand('%:r')
+  let author = 'Ben <ben@martinezbateman.com>'
+  call setline(1, filename)
+  call setline(2, author)
+  execute 'normal GGo'
+  execute 'Goyo'
+endfunction
+
+" handle some journal setup
+augroup journal
+  autocmd!
+
+  " populate journal template
+  autocmd VimEnter */journal/**   0r ~/.config/nvim/templates/journal.skeleton
+
+  " set header for this entry
+  autocmd VimEnter */journal/**   :call JournalMode()
+
+  " https://stackoverflow.com/questions/12094708/include-a-directory-recursively-for-vim-autocompletion
+  autocmd VimEnter */journal/**   setlocal complete=k/home/ben/writing/journal/**/*
+augroup end
+
 if filereadable("~/.nvim.local.vim")
   source ~/.nvim.local.vim
 endif
