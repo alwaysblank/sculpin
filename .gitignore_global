@@ -1,0 +1,29 @@
+# SQL
+db-sync
+*.sql
+
+# Vendor
+vendor
+node_modules
+
+# Debug
+npm-debug.log
+yarn-error.log
+
+# Environment
+.vscode
+.DS_Store
+.env
+.idea
+auth.json
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ctags
+tags
+
+# php-cs
+.php_cs.cache
