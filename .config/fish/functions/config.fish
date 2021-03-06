@@ -1,3 +1,3 @@
 function config
-git --git-dir=$HOME/.cfg/ --work-tree=$HOME $argv
+git --git-dir=$HOME/.sculpin/ --work-tree=$HOME $argv
 end
